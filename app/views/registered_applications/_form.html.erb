@@ -1,0 +1,21 @@
+<%= form_for(@registered_application) do |f| %>
+  <% if @registered_application.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@registered_application.errors.count, "error") %> prohibited this registered_application from being saved:</h2>
+
+      <ul>
+      <% @registered_application.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name, class: 'form-control', placeholder: "Enter application title" %>
+
+  <%= f.label :url %>
+  <%= f.text_field :url, rows: 8, class: 'form-control', placeholder: "Enter application url" %>
+
+  <%= f.submit "Save", class: 'btn btn-success' %>
+<% end %>
