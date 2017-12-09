@@ -15,7 +15,7 @@ require 'faker'
 end
 applications = RegisteredApplication.all
 
-250.times do
+1000.times do
   Event.create([{
     name: Faker::Lorem.word,
     registered_application: applications.sample
