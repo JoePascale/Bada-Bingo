@@ -21,6 +21,7 @@ gem 'turbolinks'
 gem 'bootstrap'
 gem 'figaro'
 gem 'devise'
+gem 'validate_url'
 
 group :development, :test do
   gem 'byebug'
