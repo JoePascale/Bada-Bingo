@@ -13,5 +13,7 @@
       <p> <%= event_name %> : <%= events.size %>
         <%= events.size > 1 ? "events" : "event" %> </p>
     <% end %>
+    <%= pie_chart @registered_application.events.group(:name).count %>
+    <%= line_chart @registered_application.events.group_by_day(:created_at).count %>
   </div>
 </div>

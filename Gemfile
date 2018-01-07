@@ -22,6 +22,8 @@ gem 'bootstrap'
 gem 'figaro'
 gem 'devise'
 gem 'validate_url'
+gem 'chartkick'
+gem 'groupdate'
 
 group :development, :test do
   gem 'byebug'
